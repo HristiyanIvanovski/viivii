@@ -26,4 +26,4 @@ if failed_objects:
     print(f"Number of failed imports: {len(failed_objects)}")
     print(f"First failed object: {failed_objects[0]}")
 
-client.close()  # Free up resources
+client.close()

@@ -15,4 +15,4 @@ questions = client.collections.create(
     )
 )
 
-client.close()  # Free up resources
+client.close()
