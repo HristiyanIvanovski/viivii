@@ -1,7 +1,12 @@
+import os
+
 import weaviate
+from weaviate.classes.init import Auth
 import requests, json
 
-client = weaviate.connect_to_local(port=8085)
+client = weaviate.connect_to_local(
+    port=8085, auth_credentials=Auth.api_key(os.environ["WEAVIATE_API_KEY"])
+)
 
 resp = requests.get(
     "https://raw.githubusercontent.com/weaviate-tutorials/quickstart/main/data/jeopardy_tiny.json"
